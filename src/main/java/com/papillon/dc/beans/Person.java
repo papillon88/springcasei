@@ -35,6 +35,14 @@ public class Person {
                 '}';
     }
 
+    public void onCreate(){
+        System.out.println("person created "+this);
+    }
+
+    public void onDestroy(){
+        System.out.println("person destroyed "+this);
+    }
+
     public void setTaxId(int taxId) {
         this.taxId = taxId;
     }

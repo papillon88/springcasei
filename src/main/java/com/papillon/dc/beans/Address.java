@@ -12,6 +12,14 @@ public class Address {
         this.postcode = postcode;
     }
 
+    public void init(){
+        System.out.println("default init method");
+    }
+
+    public void destroy(){
+        System.out.println("default destroy method");
+    }
+
     @Override
     public String toString() {
         return "Address{" +
