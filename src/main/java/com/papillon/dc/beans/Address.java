@@ -12,6 +12,8 @@ public class Address {
         this.postcode = postcode;
     }
 
+    public Address(){}
+
     public void init(){
         System.out.println("default init method");
     }
@@ -26,5 +28,21 @@ public class Address {
                 "street='" + street + '\'' +
                 ", postcode='" + postcode + '\'' +
                 '}';
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getPostcode() {
+        return postcode;
+    }
+
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
     }
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
         default-init-method="init" default-destroy-method="destroy">
 
@@ -16,6 +17,21 @@
         <constructor-arg name="street" value="7702 Mccallum blvd"></constructor-arg>
         <constructor-arg name="postcode" value="75252"></constructor-arg>
         <!--<property name="taxId" value="123"></property>-->
+    </bean>
+
+    <bean id="address2" class="com.papillon.dc.beans.Address" p:street="123 cod lane" p:postcode="12345">
+    </bean>
+
+    <bean id="fruitbasket" class="com.papillon.dc.beans.FruitBasket">
+        <constructor-arg name="name" value="debas basket"></constructor-arg>
+        <constructor-arg name="fruits">
+            <list>
+                <value>apple</value>
+                <value>orange</value>
+                <value>banana</value>
+                <value>peach</value>
+            </list>
+        </constructor-arg>
     </bean>
 
 
