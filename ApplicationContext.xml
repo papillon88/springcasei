@@ -34,5 +34,31 @@
         </constructor-arg>
     </bean>
 
+    <bean id="jungle" class="com.papillon.dc.beans.Jungle">
+        <property name="largest" ref="elephant"></property>
+        <property name="animals">
+            <list>
+                <ref bean="lion"></ref>
+                <ref bean="elephant"></ref>
+                <ref bean="monkey"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="lion" class="com.papillon.dc.beans.Animal">
+        <property name="name" value="igor"></property>
+        <property name="type" value="lion"></property>
+    </bean>
+
+    <bean id="elephant" class="com.papillon.dc.beans.Animal">
+        <property name="name" value="rick"></property>
+        <property name="type" value="elephant"></property>
+    </bean>
+
+    <bean id="monkey" class="com.papillon.dc.beans.Animal">
+        <property name="name" value="bob"></property>
+        <property name="type" value="monkey"></property>
+    </bean>
+
 
 </beans>

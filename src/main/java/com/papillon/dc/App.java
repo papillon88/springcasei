@@ -2,6 +2,7 @@ package com.papillon.dc;
 
 import com.papillon.dc.beans.Address;
 import com.papillon.dc.beans.FruitBasket;
+import com.papillon.dc.beans.Jungle;
 import com.papillon.dc.beans.Person;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -31,6 +32,9 @@ public class App {
 
         FruitBasket fb = (FruitBasket)context.getBean("fruitbasket");
         System.out.println(fb);
+
+        Jungle j = (Jungle)context.getBean("jungle");
+        System.out.println(j);
 
         ((FileSystemXmlApplicationContext)context).close();
     }
