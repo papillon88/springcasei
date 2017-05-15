@@ -35,7 +35,13 @@
     </bean>
 
     <bean id="jungle" class="com.papillon.dc.beans.Jungle">
-        <property name="largest" ref="elephant"></property>
+        <!--<property name="largest" ref="elephant"></property>-->
+        <property name="largest">
+            <bean class="com.papillon.dc.beans.Animal">
+                <property name="name" value="rick"></property>
+                <property name="type" value="elephant"></property>
+            </bean>
+        </property>
         <property name="animals">
             <list>
                 <ref bean="lion"></ref>
