@@ -3,7 +3,18 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="triangle" class="com.papillon.dc.Triangle"></bean>
+    <bean id="person" class="com.papillon.dc.beans.Person">
+        <constructor-arg name="id" value="777"></constructor-arg>
+        <constructor-arg name="name" value="Mary"></constructor-arg>
+        <property name="taxId" value="123"></property>
+        <property name="address" ref="address"></property>
+    </bean>
+
+    <bean id="address" class="com.papillon.dc.beans.Address">
+        <constructor-arg name="street" value="7702 Mccallum blvd"></constructor-arg>
+        <constructor-arg name="postcode" value="75252"></constructor-arg>
+        <!--<property name="taxId" value="123"></property>-->
+    </bean>
 
 
 </beans>
