@@ -36,7 +36,7 @@
 
     <bean id="jungle" class="com.papillon.dc.beans.Jungle">
         <!--<property name="largest" ref="elephant"></property>-->
-        <property name="largest">
+        <!--<property name="largest">
             <bean class="com.papillon.dc.beans.Animal">
                 <property name="name" value="rick"></property>
                 <property name="type" value="elephant"></property>
@@ -48,7 +48,22 @@
                 <ref bean="elephant"></ref>
                 <ref bean="monkey"></ref>
             </list>
+        </property>-->
+        <property name="foods">
+            <map>
+                <entry key="gorilla" value="banana"></entry>
+                <entry key="panda" value="bamboo"></entry>
+                <entry key="snake" value="milk"></entry>
+            </map>
         </property>
+        <property name="animals">
+            <map>
+                <entry key="lion" value-ref="lion"></entry>
+                <entry key="elephant" value-ref="elephant"></entry>
+                <entry key="monkey" value-ref="monkey"></entry>
+            </map>
+        </property>
+
     </bean>
 
     <bean id="lion" class="com.papillon.dc.beans.Animal">
